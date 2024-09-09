@@ -72,7 +72,7 @@ export default function FeaturedGames() {
                   height={450}
                   className="rounded-lg object-cover w-full h-full"
                 />
-                <div className="absolute bottom-8 left-8 bg-black bg-opacity-70 p-4 rounded">
+                <div className="absolute bottom-8 left-8 bg-black bg-opacity-70 p-4 rounded w-1/4 max-w-sm">
                   <h2 className="text-2xl font-bold text-white mb-2">
                     {game.title}
                   </h2>
