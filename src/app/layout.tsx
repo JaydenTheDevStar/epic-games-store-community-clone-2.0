@@ -11,7 +11,7 @@ const RootLayout = ({ children }: RootLayoutProps) => {
   return (
     <html>
       <body className={Inter_Font.className}>
-        <div className="mx-auto max-w-2xl lg:w-3/4">{children}</div>
+        <div>{children}</div>
       </body>
     </html>
   );
