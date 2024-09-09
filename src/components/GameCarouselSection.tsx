@@ -59,7 +59,7 @@ export default function FeaturedGames() {
   ];
 
   return (
-    <Carousel className="max-w-7xl mx-auto">
+    <Carousel className="max-w-5xl mx-auto">
       <CarouselContent>
         {featuredGames.map((game: Game) => (
           <CarouselItem key={game.id}>
