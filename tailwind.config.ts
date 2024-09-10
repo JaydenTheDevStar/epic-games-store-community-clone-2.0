@@ -14,6 +14,7 @@ const TailwindConfig: Config = {
         app: {
           backgroundColor: "#101014",
           textColor: "#ffffff",
+          discountColor: "#26bbff",
         },
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
