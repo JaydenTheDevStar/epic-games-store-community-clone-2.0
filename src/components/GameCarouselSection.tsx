@@ -59,33 +59,35 @@ export default function FeaturedGames() {
   ];
 
   return (
-    <Carousel className="max-w-7xl mx-auto">
+    <Carousel className="max-w-5xl mx-auto">
       <CarouselContent>
-        {featuredGames.map((game: Game) => (
+        {featuredGames.map((game) => (
           <CarouselItem key={game.id}>
-            <Card>
-              <CardContent className="flex aspect-video items-center justify-center p-6 relative">
-                <Image
-                  src={game.gameCover}
-                  alt={game.title}
-                  width={800}
-                  height={450}
-                  className="rounded-lg object-cover w-full h-full"
-                />
-                <div className="absolute bottom-8 left-8 bg-black bg-opacity-70 p-4 rounded">
-                  <h2 className="text-2xl font-bold text-white mb-2">
-                    {game.title}
-                  </h2>
-                  <p className="text-lg text-white mb-4">{game.price}</p>
-                  <Button>Buy Now</Button>
-                </div>
-              </CardContent>
-            </Card>
+            <div className="p-1">
+              <Card>
+                <CardContent className="flex aspect-video items-center justify-center p-6 relative">
+                  <Image
+                    src={game.gameCover}
+                    alt={game.title}
+                    width={800}
+                    height={450}
+                    className="rounded-lg object-cover w-full h-full"
+                  />
+                  <div className="absolute bottom-8 left-8 right-8 bg-black bg-opacity-70 p-4 rounded max-w-xs">
+                    <h2 className="text-xl md:text-2xl font-bold text-white mb-2">
+                      {game.title}
+                    </h2>
+                    <p className="text-lg text-white mb-4">{game.price}</p>
+                    <Button>Buy Now</Button>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2" />
+      <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2" />
     </Carousel>
   );
 }
